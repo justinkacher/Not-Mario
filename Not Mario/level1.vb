@@ -24,10 +24,10 @@
         ' setting ground size and location
         Dim ground As Point
         ground.X = 0
-        ground.Y = Me.Height
-        PictureBox2.Location = ground
-        PictureBox2.Width = Me.Width
-        PictureBox2.Height = 0.1 * Me.Height
+        ground.Y = Me.Height - Me.Height * 0.1
+        brick.Location = ground
+        brick.Width = Me.Width
+        brick.Height = 0.1 * Me.Height
         'sets location of close (x) button
         Dim x As Point
         x.X = 0.975 * Me.Width
@@ -287,4 +287,6 @@
         goomba_4.Text = "goomba4  " & "X: " & goomba4location.X & "   Y: " & goomba4location.Y
         goomba_5.Text = "goomba5  " & "X: " & goomba5location.X & "   Y: " & goomba5location.Y
     End Sub
+
+
 End Class

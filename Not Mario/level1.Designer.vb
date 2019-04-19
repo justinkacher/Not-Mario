@@ -24,7 +24,7 @@ Partial Class level1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(level1))
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.brick = New System.Windows.Forms.PictureBox()
         Me.charbox = New System.Windows.Forms.PictureBox()
         Me.goomba5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -45,7 +45,7 @@ Partial Class level1
         Me.goomba_3 = New System.Windows.Forms.Label()
         Me.lblscore = New System.Windows.Forms.Label()
         Me.tmrscore = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.brick, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.charbox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goomba5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,20 +55,20 @@ Partial Class level1
         CType(Me.goomba3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox2
+        'brick
         '
-        Me.PictureBox2.Image = Global.Not_Mario.My.Resources.Resources.ground
-        Me.PictureBox2.Location = New System.Drawing.Point(-5, 1202)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(3071, 116)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
+        Me.brick.Image = Global.Not_Mario.My.Resources.Resources.ground
+        Me.brick.Location = New System.Drawing.Point(1, 1181)
+        Me.brick.Name = "brick"
+        Me.brick.Size = New System.Drawing.Size(3071, 152)
+        Me.brick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.brick.TabIndex = 0
+        Me.brick.TabStop = False
         '
         'charbox
         '
         Me.charbox.BackColor = System.Drawing.Color.Transparent
-        Me.charbox.Location = New System.Drawing.Point(25, 894)
+        Me.charbox.Location = New System.Drawing.Point(25, 852)
         Me.charbox.Name = "charbox"
         Me.charbox.Size = New System.Drawing.Size(281, 323)
         Me.charbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -143,19 +143,23 @@ Partial Class level1
         '
         'timera
         '
+        Me.timera.Interval = 20
         '
         'timerd
         '
+        Me.timerd.Interval = 20
         '
         'timerw
         '
+        Me.timerw.Interval = 75
         '
         'goomba
         '
+        Me.goomba.Interval = 25
         '
         'spawngoomba
         '
-        Me.spawngoomba.Interval = 1000
+        Me.spawngoomba.Interval = 4000
         '
         'characterloc
         '
@@ -216,6 +220,7 @@ Partial Class level1
         '
         'tmrscore
         '
+        Me.tmrscore.Interval = 1
         '
         'level1
         '
@@ -223,6 +228,7 @@ Partial Class level1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SkyBlue
         Me.ClientSize = New System.Drawing.Size(3057, 1345)
+        Me.Controls.Add(Me.brick)
         Me.Controls.Add(Me.lblscore)
         Me.Controls.Add(Me.goomba_3)
         Me.Controls.Add(Me.goomba_5)
@@ -237,11 +243,10 @@ Partial Class level1
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.goomba5)
         Me.Controls.Add(Me.charbox)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "level1"
         Me.Text = "level_1"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.brick, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.charbox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goomba5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -254,7 +259,7 @@ Partial Class level1
 
     End Sub
 
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents brick As PictureBox
     Friend WithEvents charbox As PictureBox
     Friend WithEvents goomba5 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
